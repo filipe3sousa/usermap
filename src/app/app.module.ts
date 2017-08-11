@@ -9,8 +9,10 @@ import { routes } from './app.routes'
 import { AppComponent } from './app.component';
 
 import { UserService } from './user.service';
+
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { HomeComponent } from './home/home.component';
+import { LeafletMapComponent } from './leaflet-map/leaflet-map.component';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awesome';
 import { LeafletModule } from '@asymmetrik/angular2-leaflet';
@@ -19,7 +21,8 @@ import { LeafletModule } from '@asymmetrik/angular2-leaflet';
   declarations: [
     AppComponent,
     UserDetailsComponent,
-    HomeComponent
+    HomeComponent,
+    LeafletMapComponent
   ],
   imports: [
     BrowserModule,
