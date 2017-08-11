@@ -13,6 +13,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { HomeComponent } from './home/home.component';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awesome';
+import { LeafletModule } from '@asymmetrik/angular2-leaflet';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awes
     RouterModule.forRoot(routes),
     AngularFontAwesomeModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LeafletModule
   ],
   providers: [
     UserService
