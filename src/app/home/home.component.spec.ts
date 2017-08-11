@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 import { HomeComponent } from './home.component';
+
+import { UserService } from '../user.service';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -8,7 +12,10 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
+      declarations: [ HomeComponent ],
+      imports: [ HttpModule ],
+      providers: [ UserService ],
+      schemas: [ NO_ERRORS_SCHEMA ]
     })
     .compileComponents();
   }));

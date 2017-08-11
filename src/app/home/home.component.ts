@@ -39,6 +39,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         }));
     });
 
+    //Trigger the FormControl valueChanges
     this.query.setValue('');
 
   }

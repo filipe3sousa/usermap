@@ -7,8 +7,8 @@ describe('usermap App', () => {
     page = new UsermapPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display application name on the top navbar', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toEqual('UserMap Application');
   });
 });

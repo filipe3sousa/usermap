@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { LeafletModule } from '@asymmetrik/angular2-leaflet';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { LeafletMapComponent } from './leaflet-map.component';
 
@@ -8,7 +10,8 @@ describe('LeafletMapComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LeafletMapComponent ]
+      declarations: [ LeafletMapComponent ],
+      imports: [ LeafletModule, RouterTestingModule ]
     })
     .compileComponents();
   }));

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Router }            from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-leaflet-map',
@@ -24,7 +24,7 @@ export class LeafletMapComponent implements OnInit {
       zoom: 5,
       center: null
     };
-    
+
   }
 
   onMapReady(map: L.Map) {
