@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
 import { UserService } from './user.service';
+import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awesome';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { UserService } from './user.service';
   imports: [
     BrowserModule,
     HttpModule
+    AngularFontAwesomeModule,
   ],
   providers: [
     UserService
