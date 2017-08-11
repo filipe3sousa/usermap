@@ -1,6 +1,6 @@
-<div class="container-fluid">
+<div class="container">
 
-  <div *ngIf="user">
+  <div class="row" *ngIf="user">
 
     <nav class="col-xs-12 col-sm-4 navbar navbar-inverse bg-inverse sidebar">
       <div class="user-header">
@@ -46,6 +46,10 @@
 
 
     </nav>
+
+    <div class="col-xs-12 col-sm-8" *ngIf="mapItems.length">
+      <app-leaflet-map [items]="mapItems"></app-leaflet-map>
+    </div>
 
   </div>
 

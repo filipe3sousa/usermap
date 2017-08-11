@@ -13,6 +13,7 @@ import { UserService } from '../user.service'
 export class UserDetailsComponent implements OnInit, OnDestroy {
 
   user: any;
+  mapItems: Object[] = [];
   subscription: Subscription;
 
   constructor(
@@ -24,7 +25,14 @@ export class UserDetailsComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.subscription = this.route.paramMap
       .switchMap((params: ParamMap) => this.userService.getUser(+params.get('id')))
-      .subscribe(user => this.user = user);
+      .subscribe(user => {
+        this.user = user;
+        this.mapItems.push({
+          id: this.user.id,
+          name: this.user.name,
+          coords: this.user.address.geo
+        });
+      });
   }
 
   ngOnDestroy(): void {

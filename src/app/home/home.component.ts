@@ -14,8 +14,10 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   loading: boolean = true;
   users: any[];
+  mapItems: Object[] = [];
   subscription: Subscription;
   query = new FormControl();
+
 
   constructor(
     private userService: UserService
@@ -30,6 +32,11 @@ export class HomeComponent implements OnInit, OnDestroy {
       .subscribe(res =>  {
         this.users = res;
         this.loading = false;
+        this.users.forEach(user => this.mapItems.push({
+          id: user.id,
+          name: user.name,
+          coords: user.address.geo
+        }));
     });
 
     this.query.setValue('');
