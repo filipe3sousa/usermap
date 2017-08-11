@@ -5,17 +5,6 @@
     <a class="navbar-brand" href="#">UserMap Application</a>
   </nav>
 
-  <div class="container-fluid">
-
-    <nav class="col-xs-12 col-sm-4 navbar navbar-inverse bg-inverse sidebar">
-        <span class="text-white text-uppercase">Users</span>
-        <ul class="navbar-nav flex-column">
-          <li class="nav-item" *ngFor="let user of users">
-            <a class="nav-link" href="#">{{ user.username }}</a>
-          </li>
-        </ul>
-    </nav>
-
-  </div>
+  <router-outlet></router-outlet>
 
 </div>

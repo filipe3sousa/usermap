@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
-import { UserService } from './user.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,22 +6,4 @@ import { UserService } from './user.service';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
-
-  constructor(
-    private userService: UserService
-  ) {}
-
-  users: any[];
-
-  getUsers(): void {
-    this.userService.getUsers().subscribe( res => {
-      this.users = res
-    });
-  }
-
-  ngOnInit(): void {
-    this.getUsers();
-  }
-
-}
+export class AppComponent {}
