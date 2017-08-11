@@ -3,3 +3,12 @@ body {
   padding-top: 60px;
   background-color: #525252;
 }
+
+.sidebar {
+  height: 80vh;
+}
+
+.sidebar .icon {
+  color: rgb(255,255,255);
+  color: rgba(255,255,255,.5);
+}

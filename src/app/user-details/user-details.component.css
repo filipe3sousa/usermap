@@ -1,0 +1,32 @@
+.user-header {
+  margin: 10px 0 10px;
+  text-align: center;
+}
+
+h3 {
+  color: rgb(255,255,255);
+  color: rgba(255,255,255,.5);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user-info {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.user-info .item {
+  margin-bottom: 20px;
+  color: rgb(255,255,255);
+  color: rgba(255,255,255,.5);
+}
+
+.user-info .item a {
+  display: inline;
+}
+
+.btn-container {
+  position: absolute;
+  bottom: 15px;
+}

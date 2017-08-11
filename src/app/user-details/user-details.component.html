@@ -1,0 +1,52 @@
+<div class="container-fluid">
+
+  <div *ngIf="user">
+
+    <nav class="col-xs-12 col-sm-4 navbar navbar-inverse bg-inverse sidebar">
+      <div class="user-header">
+        <fa name="user-circle" size="5x" class="icon"></fa>
+      </div>
+
+      <h3>{{ user.name }}</h3>
+
+      <span class="text-white text-uppercase">About</span>
+
+      <ul class="navbar-nav user-info">
+
+        <li class="nav-item item">
+          <fa name="home" class="icon"></fa>
+          <span>Lives in {{ user.address.city }}</span>
+        </li>
+
+        <li class="nav-item item">
+          <fa name="briefcase" class="icon"></fa>
+          <span>Works at {{ user.company.name }}</span>
+        </li>
+
+        <li class="nav-item item">
+          <fa name="globe" class="icon"></fa>
+          <a class="nav-link" [href]="getWebsiteURL()">{{ user.website }}</a>
+        </li>
+
+        <li class="nav-item item">
+          <fa name="phone-square" class="icon"></fa>
+          <span>{{ user.phone }}</span>
+        </li>
+
+        <li class="nav-item item">
+          <fa name="envelope" class="icon"></fa>
+          <span>{{ user.email }}</span>
+        </li>
+
+      </ul>
+
+      <div class="btn-container">
+        <button type="button" class="btn btn-outline-secondary" role="button" (click)="goBack()">Back</button>
+      </div>
+
+
+    </nav>
+
+  </div>
+
+<div class="container-fluid">

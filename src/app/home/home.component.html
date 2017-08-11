@@ -1,0 +1,29 @@
+<div class="container-fluid">
+
+  <nav class="col-xs-12 col-sm-4 navbar navbar-inverse bg-inverse sidebar">
+
+      <div class="form-group row">
+          <div class="col-12">
+            <input class="form-control search-box" type="text" placeholder="Search..."
+              [formControl]="query" />
+            <fa name="search" class="search-icon"></fa>
+          </div>
+      </div>
+
+      <span class="text-white text-uppercase">Users</span>
+      <ul class="navbar-nav flex-column">
+        <li class="nav-item" *ngFor="let user of users">
+          <a class="nav-link" [routerLink]="['/user', user.id]">{{ user.username }}</a>
+        </li>
+        <li class="nav-item nav-link" *ngIf="!loading && !users?.length">No users found!</li>
+      </ul>
+
+      <div class="loading-spinner" *ngIf="loading">
+        <fa name="circle-o-notch" animation="spin" size="3x" class="icon"></fa>
+      </div>
+
+  </nav>
+
+
+
+</div>

@@ -15,8 +15,15 @@ export class UserService {
      return Observable.throw(error.json());
   }
 
-  getUsers(): Observable<any[]> {
-    return this.http.get(`${environment.api_url}/users`, {})
+  getUser(id: number): Promise<any[]> {
+    return this.http.get(`${environment.api_url}/users/${id}`, {})
+    .toPromise()
+    .then((res: Response) => res.json())
+    .catch((err: any) => err.json());
+  }
+
+  searchUser(query: string): Observable<any[]> {
+    return this.http.get(`${environment.api_url}/users?q=${query}`, {})
     .catch(this.formatErrors)
     .map((res: Response) => res.json());
   }
